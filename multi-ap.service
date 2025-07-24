@@ -1,0 +1,12 @@
+[Unit]
+Description=Multi Wi‑Fi Access Point Setup
+After=network.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/multi-ap-setup.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
